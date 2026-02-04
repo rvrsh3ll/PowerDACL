@@ -627,12 +627,7 @@ function Set-DomainObject {
 		[string]$Server
     )
 	
-	if($Set -AND $Clear){
-		Write-Output "[-] Please use either Set OR Clear"
-		break
-	}
-	
-	elseif(!$Set -AND !$Clear){
+	if(!$Set -AND !$Clear){
 		Write-Output "[-] Please specify a Set OR Clear action"
 		break
 	}
